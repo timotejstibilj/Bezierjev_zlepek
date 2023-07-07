@@ -1,10 +1,11 @@
-function plotBezier(b)
+function plotBezier(b, st_tock)
     % PLOTBEZIER izrise Bezierjevo krivuljo in kontrolni poligon.
     % plotBezier(b)
-    % Za izracun tock na krivulji uporabimo deCasteljauov algoritem.
     % b je matrika kontrolnih točk z dvema stolpcema (x in y koordinate)
+    % %st_tock je stevilo tock risanja
+    % Za izracun tock na krivulji uporabimo deCasteljauov algoritem.
 
-    t = linspace(0,1,100);
+    t = linspace(0,1,st_tock);
     tocke = deCasteljau(b, t);
     x=tocke(1,:);
     y=tocke(2,:);
