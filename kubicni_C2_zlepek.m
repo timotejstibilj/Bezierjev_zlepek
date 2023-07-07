@@ -1,5 +1,6 @@
 function b = kubicni_C2_zlepek(u,p,v0,vN)
-    % KUBICNI_C2_ZLEPEK racuna kontrolne tocke C^2 kubičnega zlepka
+    % KUBICNI_C2_ZLEPEK racuna kontrolne tocke C^2 kubičnega zlepka in
+    % nariše ta zlepek
     % b=KUBICNI_C2_ZLEPEK(u,p,v) vrne matriko kontrolnih tock C^2 kubičnega zlepka,
     % ki interpolira dane točke pri čemer upošteva tangentna vektorja v prvi in
     % zadnji točki
@@ -10,7 +11,11 @@ function b = kubicni_C2_zlepek(u,p,v0,vN)
     
     %TODO: lahko bi združil primera s podanimi tangentami in Besselov zlepek:nargin = 3 oz nargin <3...
     
-    V = tangente_kubicnega_C2_zlepka(u,p,v0, vN);
+    if nargin == 4 %če imamo podana tangentna vektorja v0 in vN:
+        V = tangente_kubicnega_C2_zlepka(u,p,v0,vN);
+    else
+        V = tangente_kubicnega_C2_zlepka(u,p);
+    end        
 
     n = size(p, 1); %število interpolacijskih točk
     b = zeros(3*(n-1) + 1, 2); % kontrolne točke
