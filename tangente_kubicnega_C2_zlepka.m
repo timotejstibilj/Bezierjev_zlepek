@@ -30,6 +30,8 @@ function V = tangente_kubicnega_C2_zlepka(u,p,v0,vN)
         F(end, 1:2) = F(end, 1:2) - vN .* (du(end-1) / (du(end) + du(end-1)));
         
         %notranji tangentni vektorjev v1, v2, ..., v_{N-1) C^2 kubičnega zlepka,
+        %A = diag(a, -1) + diag(b, 0) + diag(c, 1) je strogo diagonalno
+        %dominantna, zato bo rešitev ena sama
         V_in = Thomas(a, b, c, F);
         
         V = [v0; V_in; vN]; % celoten nabor vektorjev
