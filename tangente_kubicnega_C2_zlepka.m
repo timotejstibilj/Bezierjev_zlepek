@@ -35,6 +35,7 @@ function V = tangente_kubicnega_C2_zlepka(u,p,v0,vN)
         V_in = Thomas(a, b, c, F);
         
         V = [v0; V_in; vN]; % celoten nabor vektorjev
+        
 
     else % Besselov zlepek, če nimamo v0 in vN
         %popravimo tridiagonalno matriko, ker nimamo v0, vN

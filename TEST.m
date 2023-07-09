@@ -1,7 +1,7 @@
 % Primer risanja kubicnega C^2 Bezierjevega zlepka
 % z enakomerno porazdeljenimi delilnimi točkami
 
-p=[1,2,3,4,5; 1,5,0,4,3]'; %interpolacijske tocke
+p=[1,2,3, 4, 5, 6; 1, 5, 0, 3, 0, 6]'; %interpolacijske tocke
 u=(1:size(p, 1))'; % delilne tocke
 
 %tangentna vektorja v zacetni in koncni tocki
@@ -57,3 +57,4 @@ for i=2:n
 end
 title("tetivna parametrizacija");
 kubicni_C2_zlepek(u,p);
+

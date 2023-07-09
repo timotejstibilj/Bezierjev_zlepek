@@ -14,6 +14,7 @@ function plotBezier(b, st_tock)
     plot(b(:, 1), b(:, 2), "o"); %Kontrolne točke
     plot(b(:, 1), b(:, 2)); %Kontrolni poligon
     p=b(1:3:end,1:2); %interpolacijske tocke
+    plot(p(:, 1), p(:, 2),"ro", 'MarkerSize', 7.5, 'MarkerFaceColor', 'r');
     
 
     plot(x,y) %nariše bezierjevo krivuljo, več t-jev kot vzamemo bolj bo gladka, 
