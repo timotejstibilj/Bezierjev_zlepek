@@ -1,4 +1,4 @@
-# Bezierjev_zlepek
+# Bezierjev zlepek
 
 Naj bo danih N interpolacijskih točk, delilne točke in tangentna vektorja v prvi in zadnji od teh točk. Konstruiramo C2 kubični Bezierjev
 zlepek, ki interpolira dane podatke. Obravnavamo tudi primer, ko tangenti
